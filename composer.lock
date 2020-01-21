@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "feaa69cb2171c3a41b713b092b58616f",
+    "content-hash": "5961ab034d36d03bb019fee7193f64ca",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -39,71 +39,165 @@
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
-            "name": "guzzle/guzzle",
-            "version": "v3.9.3",
+            "name": "guzzlehttp/guzzle",
+            "version": "6.5.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/guzzle3.git",
-                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9"
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/0645b70d953bc1c067bbc8d5bc53194706b628d9",
-                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/43ece0e75098b7ecd8d13918293029e555a50f82",
+                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.3",
-                "symfony/event-dispatcher": "~2.1"
-            },
-            "replace": {
-                "guzzle/batch": "self.version",
-                "guzzle/cache": "self.version",
-                "guzzle/common": "self.version",
-                "guzzle/http": "self.version",
-                "guzzle/inflection": "self.version",
-                "guzzle/iterator": "self.version",
-                "guzzle/log": "self.version",
-                "guzzle/parser": "self.version",
-                "guzzle/plugin": "self.version",
-                "guzzle/plugin-async": "self.version",
-                "guzzle/plugin-backoff": "self.version",
-                "guzzle/plugin-cache": "self.version",
-                "guzzle/plugin-cookie": "self.version",
-                "guzzle/plugin-curlauth": "self.version",
-                "guzzle/plugin-error-response": "self.version",
-                "guzzle/plugin-history": "self.version",
-                "guzzle/plugin-log": "self.version",
-                "guzzle/plugin-md5": "self.version",
-                "guzzle/plugin-mock": "self.version",
-                "guzzle/plugin-oauth": "self.version",
-                "guzzle/service": "self.version",
-                "guzzle/stream": "self.version"
+                "ext-json": "*",
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.6.1",
+                "php": ">=5.5"
             },
             "require-dev": {
-                "doctrine/cache": "~1.3",
-                "monolog/monolog": "~1.0",
-                "phpunit/phpunit": "3.7.*",
-                "psr/log": "~1.0",
-                "symfony/class-loader": "~2.1",
-                "zendframework/zend-cache": "2.*,<2.3",
-                "zendframework/zend-log": "2.*,<2.3"
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
+                "psr/log": "^1.1"
             },
             "suggest": {
-                "guzzlehttp/guzzle": "Guzzle 5 has moved to a new package name. The package you have installed, Guzzle 3, is deprecated."
+                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
+                "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.9-dev"
+                    "dev-master": "6.5-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Guzzle": "src/",
-                    "Guzzle\\Tests": "tests/"
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
                 }
+            ],
+            "description": "Guzzle is a PHP HTTP client library",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2019-12-23T11:57:10+00:00"
+        },
+        {
+            "name": "guzzlehttp/promises",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "time": "2016-12-20T10:07:11+00:00"
+        },
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0",
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "ext-zlib": "*",
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "suggest": {
+                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -116,23 +210,288 @@
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
-                    "name": "Guzzle Community",
-                    "homepage": "https://github.com/guzzle/guzzle/contributors"
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
-            "description": "PHP HTTP client. This library is deprecated in favor of https://packagist.org/packages/guzzlehttp/guzzle",
-            "homepage": "http://guzzlephp.org/",
+            "description": "PSR-7 message implementation that also provides common utility methods",
             "keywords": [
-                "client",
-                "curl",
-                "framework",
                 "http",
-                "http client",
-                "rest",
-                "web service"
+                "message",
+                "psr-7",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
             ],
-            "abandoned": "guzzlehttp/guzzle",
-            "time": "2015-03-18T18:23:50+00:00"
+            "time": "2019-07-01T23:21:34+00:00"
+        },
+        {
+            "name": "laminas/laminas-config",
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-config.git",
+                "reference": "b8fe057f55e69a0e7a2e4ced79218a43f58606a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-config/zipball/b8fe057f55e69a0e7a2e4ced79218a43f58606a8",
+                "reference": "b8fe057f55e69a0e7a2e4ced79218a43f58606a8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laminas/laminas-stdlib": "^2.7.7 || ^3.1",
+                "laminas/laminas-zendframework-bridge": "^1.0",
+                "php": "^5.6 || ^7.0",
+                "psr/container": "^1.0"
+            },
+            "conflict": {
+                "container-interop/container-interop": "<1.2.0"
+            },
+            "replace": {
+                "zendframework/zend-config": "self.version"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~1.0.0",
+                "laminas/laminas-filter": "^2.7.2",
+                "laminas/laminas-i18n": "^2.7.4",
+                "laminas/laminas-servicemanager": "^2.7.8 || ^3.3",
+                "malukenho/docheader": "^0.1.6",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2"
+            },
+            "suggest": {
+                "laminas/laminas-filter": "^2.7.2; install if you want to use the Filter processor",
+                "laminas/laminas-i18n": "^2.7.4; install if you want to use the Translator processor",
+                "laminas/laminas-servicemanager": "^2.7.8 || ^3.3; if you need an extensible plugin manager for use with the Config Factory"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev",
+                    "dev-develop": "3.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\Config\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides a nested object property based user interface for accessing this configuration data within application code",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "config",
+                "laminas"
+            ],
+            "time": "2019-12-31T16:30:11+00:00"
+        },
+        {
+            "name": "laminas/laminas-filter",
+            "version": "2.9.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-filter.git",
+                "reference": "52b5cdbef8902280996e687e7352a648a8e22f31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-filter/zipball/52b5cdbef8902280996e687e7352a648a8e22f31",
+                "reference": "52b5cdbef8902280996e687e7352a648a8e22f31",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-stdlib": "^2.7.7 || ^3.1",
+                "laminas/laminas-zendframework-bridge": "^1.0",
+                "php": "^5.6 || ^7.0"
+            },
+            "conflict": {
+                "laminas/laminas-validator": "<2.10.1"
+            },
+            "replace": {
+                "zendframework/zend-filter": "self.version"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~1.0.0",
+                "laminas/laminas-crypt": "^3.2.1",
+                "laminas/laminas-servicemanager": "^2.7.8 || ^3.3",
+                "laminas/laminas-uri": "^2.6",
+                "pear/archive_tar": "^1.4.3",
+                "phpunit/phpunit": "^5.7.23 || ^6.4.3",
+                "psr/http-factory": "^1.0"
+            },
+            "suggest": {
+                "laminas/laminas-crypt": "Laminas\\Crypt component, for encryption filters",
+                "laminas/laminas-i18n": "Laminas\\I18n component for filters depending on i18n functionality",
+                "laminas/laminas-servicemanager": "Laminas\\ServiceManager component, for using the filter chain functionality",
+                "laminas/laminas-uri": "Laminas\\Uri component, for the UriNormalize filter",
+                "psr/http-factory-implementation": "psr/http-factory-implementation, for creating file upload instances when consuming PSR-7 in file upload filters"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.9.x-dev",
+                    "dev-develop": "2.10.x-dev"
+                },
+                "laminas": {
+                    "component": "Laminas\\Filter",
+                    "config-provider": "Laminas\\Filter\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\Filter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Programmatically filter and normalize data and files",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "filter",
+                "laminas"
+            ],
+            "time": "2020-01-07T20:43:53+00:00"
+        },
+        {
+            "name": "laminas/laminas-inputfilter",
+            "version": "2.10.1",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:laminas/laminas-inputfilter.git",
+                "reference": "b29ce8f512c966468eee37ea4873ae5fb545d00a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-inputfilter/zipball/b29ce8f512c966468eee37ea4873ae5fb545d00a",
+                "reference": "b29ce8f512c966468eee37ea4873ae5fb545d00a",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-filter": "^2.9.1",
+                "laminas/laminas-servicemanager": "^2.7.10 || ^3.3.1",
+                "laminas/laminas-stdlib": "^2.7 || ^3.0",
+                "laminas/laminas-validator": "^2.11",
+                "laminas/laminas-zendframework-bridge": "^1.0",
+                "php": "^5.6 || ^7.0"
+            },
+            "replace": {
+                "zendframework/zend-inputfilter": "self.version"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~1.0.0",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.14 || ^7.5.15",
+                "psr/http-message": "^1.0"
+            },
+            "suggest": {
+                "psr/http-message-implementation": "PSR-7 is required if you wish to validate PSR-7 UploadedFileInterface payloads"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.10.x-dev",
+                    "dev-develop": "2.11.x-dev"
+                },
+                "laminas": {
+                    "component": "Laminas\\InputFilter",
+                    "config-provider": "Laminas\\InputFilter\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\InputFilter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Normalize and validate input sets from the web, APIs, the CLI, and more, including files",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "inputfilter",
+                "laminas"
+            ],
+            "time": "2019-12-31T17:11:54+00:00"
+        },
+        {
+            "name": "laminas/laminas-servicemanager",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-servicemanager.git",
+                "reference": "044cb8e380682563fb277ed5f6de4f690e4e6239"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-servicemanager/zipball/044cb8e380682563fb277ed5f6de4f690e4e6239",
+                "reference": "044cb8e380682563fb277ed5f6de4f690e4e6239",
+                "shasum": ""
+            },
+            "require": {
+                "container-interop/container-interop": "^1.2",
+                "laminas/laminas-stdlib": "^3.2.1",
+                "laminas/laminas-zendframework-bridge": "^1.0",
+                "php": "^5.6 || ^7.0",
+                "psr/container": "^1.0"
+            },
+            "provide": {
+                "container-interop/container-interop-implementation": "^1.2",
+                "psr/container-implementation": "^1.0"
+            },
+            "replace": {
+                "zendframework/zend-servicemanager": "self.version"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~1.0.0",
+                "mikey179/vfsstream": "^1.6.5",
+                "ocramius/proxy-manager": "^1.0 || ^2.0",
+                "phpbench/phpbench": "^0.13.0",
+                "phpunit/phpunit": "^5.7.25 || ^6.4.4"
+            },
+            "suggest": {
+                "laminas/laminas-stdlib": "laminas-stdlib ^2.5 if you wish to use the MergeReplaceKey or MergeRemoveKey features in Config instances",
+                "ocramius/proxy-manager": "ProxyManager 1.* to handle lazy initialization of services"
+            },
+            "bin": [
+                "bin/generate-deps-for-config-factory",
+                "bin/generate-factory-for-class"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev",
+                    "dev-develop": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\ServiceManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Factory-Driven Dependency Injection Container",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "PSR-11",
+                "dependency-injection",
+                "di",
+                "dic",
+                "laminas",
+                "service-manager",
+                "servicemanager"
+            ],
+            "time": "2019-12-31T17:44:47+00:00"
         },
         {
             "name": "laminas/laminas-stdlib",
@@ -316,6 +675,174 @@
             "time": "2020-01-07T22:58:31+00:00"
         },
         {
+            "name": "league/container",
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/container.git",
+                "reference": "235cc528636833fbf0d771ad0e2410d345e1096e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/container/zipball/235cc528636833fbf0d771ad0e2410d345e1096e",
+                "reference": "235cc528636833fbf0d771ad0e2410d345e1096e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "psr/container": "^1.0"
+            },
+            "provide": {
+                "psr/container-implementation": "^1.0"
+            },
+            "replace": {
+                "orno/di": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev",
+                    "dev-2.x": "2.x-dev",
+                    "dev-1.x": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Container\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Bennett",
+                    "email": "philipobenito@gmail.com",
+                    "homepage": "http://www.philipobenito.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fast and intuitive dependency injection container.",
+            "homepage": "https://github.com/thephpleague/container",
+            "keywords": [
+                "container",
+                "dependency",
+                "di",
+                "injection",
+                "league",
+                "provider",
+                "service"
+            ],
+            "time": "2019-06-30T10:51:38+00:00"
+        },
+        {
+            "name": "league/tactician",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/tactician.git",
+                "reference": "d0339e22fd9252fb0fa53102b488d2c514483b8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/tactician/zipball/d0339e22fd9252fb0fa53102b488d2c514483b8a",
+                "reference": "d0339e22fd9252fb0fa53102b488d2c514483b8a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "^4.8.35",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Tactician\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ross Tuck",
+                    "homepage": "http://tactician.thephpleague.com"
+                }
+            ],
+            "description": "A small, flexible command bus. Handy for building service layers.",
+            "keywords": [
+                "command",
+                "command bus",
+                "service layer"
+            ],
+            "time": "2017-11-30T09:17:20+00:00"
+        },
+        {
+            "name": "league/tactician-container",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/tactician-container.git",
+                "reference": "d1a5d884e072b8cafbff802d07766076eb2ffcb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/tactician-container/zipball/d1a5d884e072b8cafbff802d07766076eb2ffcb0",
+                "reference": "d1a5d884e072b8cafbff802d07766076eb2ffcb0",
+                "shasum": ""
+            },
+            "require": {
+                "league/tactician": "^1.0",
+                "php": ">=5.5",
+                "psr/container": "^1.0"
+            },
+            "require-dev": {
+                "league/container": "~2.3",
+                "phpunit/phpunit": "~4.3",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\Tactician\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nigel Greenway",
+                    "homepage": "http://futurepixels.co.uk"
+                }
+            ],
+            "description": "Tactician integration for any container implementing PSR-11",
+            "keywords": [
+                "container",
+                "container-interop",
+                "di",
+                "interoperable",
+                "league",
+                "tactician"
+            ],
+            "time": "2017-04-13T06:27:12+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -365,45 +892,80 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
-            "name": "symfony/event-dispatcher",
-            "version": "v2.8.52",
+            "name": "psr/http-message",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "a77e974a5fecb4398833b0709210e3d5e334ffb0"
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a77e974a5fecb4398833b0709210e3d5e334ffb0",
-                "reference": "a77e974a5fecb4398833b0709210e3d5e334ffb0",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "^2.0.5|~3.0.0",
-                "symfony/dependency-injection": "~2.6|~3.0.0",
-                "symfony/expression-language": "~2.6|~3.0.0",
-                "symfony/stopwatch": "~2.3|~3.0.0"
-            },
-            "suggest": {
-                "symfony/dependency-injection": "",
-                "symfony/http-kernel": ""
+                "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "ralouphie/getallheaders",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -412,17 +974,12 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
                 }
             ],
-            "description": "Symfony EventDispatcher Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-11-21T14:20:20+00:00"
+            "description": "A polyfill for getallheaders.",
+            "time": "2019-03-08T08:55:37+00:00"
         }
     ],
     "packages-dev": [
@@ -1948,6 +2505,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.4",
+        "ext-json": "*"
+    },
     "platform-dev": []
 }

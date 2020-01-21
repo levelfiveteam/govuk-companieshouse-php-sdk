@@ -1,18 +1,26 @@
 {
-    "name": "levelfivehub/govuk-companieshouse-php-sdk",
-    "description": "Companies House PHP SDK",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Gaurav Malhotra",
-            "email": "gaurav@level5.co.uk"
-        }
-    ],
-    "require": {
-        "laminas/laminas-validator": "^2.13",
-        "guzzle/guzzle": "^3.9"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.5"
+  "name": "levelfivehub/govuk-companieshouse-php-sdk",
+  "description": "Companies House PHP SDK",
+  "minimum-stability": "stable",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Gaurav Malhotra",
+      "email": "gaurav@level5.co.uk"
     }
+  ],
+  "require": {
+    "laminas/laminas-validator": "^2.13",
+    "php": "^7.4",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.3",
+    "league/tactician": "^1.0",
+    "league/container": "^3.3",
+    "league/tactician-container": "^2.0",
+    "laminas/laminas-inputfilter": "^2.10",
+    "laminas/laminas-config": "^3.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.5"
+  }
 }
