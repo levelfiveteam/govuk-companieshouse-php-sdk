@@ -4,7 +4,10 @@ namespace LevelFive\CompaniesHouse;
 
 abstract class Handler
 {
-    protected CompaniesHouseConfig $companiesHouseConfig;
+    /**
+     * @var CompaniesHouseConfig
+     */
+    protected $companiesHouseConfig;
 
     public function setCompaniesHouseConfig(CompaniesHouseConfig $companiesHouseConfig)
     {

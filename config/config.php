@@ -12,9 +12,10 @@ return [
     ],
     'commands' => [
         Query\Version\GetVersion::class => QueryHandler\Version\GetVersionHandler::class,
+        Query\Me\PHPVersion::class => QueryHandler\Me\PHPVersionHandler::class,
     ],
     'entity_map' => [
-        Query\Version\GetVersion::class => "Railsbank\\Entity\\Version\\VersionNumber",
+        Query\Version\GetVersion::class => "LevelFive\\CompaniesHouse\\Entity\\Version\\VersionNumber",
     ],
     'companieshouse_http_url' => [
         Query\Version\GetVersion::class => '/v1/customer/version',

@@ -12,7 +12,10 @@ use League\Tactician\Handler\MethodNameInflector\HandleClassNameInflector;
 
 class CommandBusFactory
 {
-    private CommandBus $commandBus;
+    /**
+     * @var CommandBus
+     */
+    private $commandBus;
 
     public function __construct(CompaniesHouseConfig $companiesHouseConfig)
     {

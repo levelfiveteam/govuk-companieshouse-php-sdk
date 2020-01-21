@@ -1,6 +1,6 @@
 <?php
 
-namespace LevelFive\Entity;
+namespace LevelFive\CompaniesHouse\Entity;
 
 abstract class Entity
 {

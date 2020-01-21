@@ -3,6 +3,7 @@ namespace Test;
 
 use DomainException;
 use LevelFive\CompaniesHouse\CommandInterface;
+use LevelFive\CompaniesHouse\Query\Version\GetVersion;
 use PHPUnit\Framework\TestCase;
 use LevelFive\CompaniesHouse\Command;
 use LevelFive\CompaniesHouse\CompaniesHouseConfig;
@@ -14,7 +15,7 @@ abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTest
     /**
      * @dataProvider getCommandInputs
      */
-    public function testCommand($errorExpected = false, $input = [], $response = false)
+    public function testCommand(bool $errorExpected = false, array $input = [], $response = false)
     {
         if ($errorExpected) {
             self::expectException(DomainException::class);

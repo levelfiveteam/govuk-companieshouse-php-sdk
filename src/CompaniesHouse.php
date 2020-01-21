@@ -8,9 +8,15 @@ use LevelFive\CompaniesHouse\CompaniesHouseConfig;
 
 class CompaniesHouse
 {
-    private CompaniesHouseConfig $companiesHouseConfig;
+    /**
+     * @var CompaniesHouseConfig
+     */
+    private $companiesHouseConfig;
 
-    private CommandBusFactory $commandBus;
+    /**
+     * @var CommandBusFactory
+     */
+    private $commandBus;
 
     public function __construct(string $apiKey)
     {

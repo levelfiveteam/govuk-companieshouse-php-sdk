@@ -6,7 +6,10 @@ use LevelFive\CompaniesHouse\Exception\NoApiKeyException;
 
 class CompaniesHouseConfig
 {
-    private string $apiKey;
+    /**
+     * @var string
+     */
+    private $apiKey;
 
     public function __construct(string $apiKey)
     {
