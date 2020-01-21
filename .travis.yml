@@ -20,7 +20,7 @@ install:
 
 script:
   - mkdir -p build/logs
-  - composer test
+  - composer tests
   - composer test-coverage
 
 after_success:
