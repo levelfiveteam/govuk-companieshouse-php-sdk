@@ -3,7 +3,6 @@ namespace LevelFive\CompaniesHouse;
 
 use Laminas\InputFilter\Factory;
 use Laminas\InputFilter\InputFilterInterface;
-use Railsbank\RailsbankConfig;
 
 abstract class Command
 {

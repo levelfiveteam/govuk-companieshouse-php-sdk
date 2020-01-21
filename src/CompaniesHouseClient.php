@@ -156,6 +156,6 @@ class CompaniesHouseClient
 
     private function getCustomerApiKey() : string
     {
-        return 'API-Key ' . $this->configService->getApiKey();
+        return $this->configService->getApiKey();
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Test\Query\Version;
 
-use LevelFive\CompaniesHouse\Query\Version\GetVersion;
+use LevelFive\CompaniesHouse\Query\Company\GetVersion;
 use Test\CommandOrQueryTest;
 
 class GetVersionTest extends CommandOrQueryTest

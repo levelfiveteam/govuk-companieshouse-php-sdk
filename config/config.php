@@ -8,16 +8,16 @@ use LevelFive\CompaniesHouse\QueryHandler;
 */
 return [
     'configuration' => [
-        'base_url' => 'https://api.companieshouse.gov.uk/'
+        'base_url' => 'https://api.companieshouse.gov.uk'
     ],
     'commands' => [
-        Query\Version\GetVersion::class => QueryHandler\Version\GetVersionHandler::class,
+        Query\Company\GetCompanyByNumber::class => QueryHandler\Company\GetCompanyByNumberHandler::class,
         Query\Me\PHPVersion::class => QueryHandler\Me\PHPVersionHandler::class,
     ],
     'entity_map' => [
-        Query\Version\GetVersion::class => "LevelFive\\CompaniesHouse\\Entity\\Version\\VersionNumber",
+        Query\Company\GetCompanyByNumber::class => "LevelFive\\CompaniesHouse\\Entity\\Company\\GetCompany",
     ],
     'companieshouse_http_url' => [
-        Query\Version\GetVersion::class => '/v1/customer/version',
+        Query\Company\GetCompanyByNumber::class => '/company/{{company_number}}',
     ],
 ];
