@@ -17,9 +17,14 @@ class CommandBusFactory
      */
     private $commandBus;
 
-    public function __construct(CompaniesHouseConfig $companiesHouseConfig)
+    /**
+     * @var CompaniesHouseConfig
+     */
+    private $config;
+
+    public function __construct(CompaniesHouseConfig $config)
     {
-        $this->registerCommandBus($companiesHouseConfig);
+        $this->registerCommandBus($config);
     }
 
     public function handle(CommandInterface $command)
@@ -27,9 +32,9 @@ class CommandBusFactory
         return $this->commandBus->handle($command);
     }
 
-    private function registerCommandBus(CompaniesHouseConfig $companiesHouseConfig)
+    private function registerCommandBus(CompaniesHouseConfig $config)
     {
-        $commands = $companiesHouseConfig->getBaseConfig()->get('commands');
+        $commands = $config->getBaseConfig()->get('commands');
 
         $containerLocator = new ContainerLocator(
             (new Container())->delegate(new ReflectionContainer()),

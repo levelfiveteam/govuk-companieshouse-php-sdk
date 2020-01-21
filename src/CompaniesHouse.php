@@ -1,26 +1,21 @@
 <?php
 namespace LevelFive\CompaniesHouse;
 
-use LevelFive\CompaniesHouse\CommandBusFactory;
-use LevelFive\CompaniesHouse\Exception\NoApiKeyException;
-use LevelFive\CompaniesHouse\CommandInterface;
-use LevelFive\CompaniesHouse\CompaniesHouseConfig;
-
 class CompaniesHouse
 {
-    /**
-     * @var CompaniesHouseConfig
-     */
-    private $companiesHouseConfig;
-
     /**
      * @var CommandBusFactory
      */
     private $commandBus;
 
-    public function __construct(string $apiKey)
+    /**
+     * @var CompaniesHouseConfig
+     */
+    private $companiesHouseConfig;
+
+    public function __construct($apiKey = "", array $config = [])
     {
-        $this->companiesHouseConfig = new CompaniesHouseConfig($apiKey);
+        $this->companiesHouseConfig = new CompaniesHouseConfig($apiKey, $config);
         $this->commandBus = new CommandBusFactory($this->companiesHouseConfig);
     }
 
@@ -31,6 +26,6 @@ class CompaniesHouse
      */
     public function handle(CommandInterface $command)
     {
-        return $this->commandBus->handle($command);
+        return $this->commandBus->handle($command->setConfig($this->companiesHouseConfig));
     }
 }

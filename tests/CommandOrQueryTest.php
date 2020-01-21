@@ -1,14 +1,12 @@
 <?php
+
 namespace Test;
 
 use DomainException;
-use LevelFive\CompaniesHouse\CommandInterface;
-use LevelFive\CompaniesHouse\Query\Version\GetVersion;
-use PHPUnit\Framework\TestCase;
-use LevelFive\CompaniesHouse\Command;
-use LevelFive\CompaniesHouse\CompaniesHouseConfig;
-use Laminas\Config\Config;
 use Laminas\InputFilter\InputFilterInterface;
+use LevelFive\CompaniesHouse\Command;
+use LevelFive\CompaniesHouse\CommandInterface;
+use PHPUnit\Framework\TestCase;
 
 abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTestInterface
 {

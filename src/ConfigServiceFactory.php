@@ -8,6 +8,27 @@ use LevelFive\CompaniesHouse\Exception\CompaniesHouseConfigurationMissingExcepti
 
 class ConfigServiceFactory
 {
+    /**
+     * @var array
+     */
+    private $config = [];
+
+    /**
+     * ConfigServiceFactory constructor.
+     *
+     * @param bool $config
+     */
+    public function __construct($config = false)
+    {
+        if (! empty($config)) {
+            $configuration = [
+                'configuration' => $config,
+            ];
+
+            $this->config = $configuration;
+        }
+    }
+
     public function getConfigService() :? Config
     {
         $config = Factory::fromFile(__DIR__ . '/../config/config.php');

@@ -2,26 +2,51 @@
 
 namespace LevelFive\CompaniesHouse;
 
-use LevelFive\CompaniesHouse\Exception\NoApiKeyException;
+use Laminas\Config\Config;
 
 class CompaniesHouseConfig
 {
     /**
-     * @var string
+     * @var Config
+     */
+    private $configService;
+
+    /**
+     * @var Config
+     */
+    private $companiesHouseConfig;
+
+    /**
+     * @var CompaniesHouseApiKey
      */
     private $apiKey;
 
-    public function __construct(string $apiKey)
+    public function __construct(string $apiKey, array $config = [])
     {
-        if (empty($apiKey)) {
-            throw new NoApiKeyException();
-        }
+        $this->apiKey = new CompaniesHouseApiKey($apiKey);
 
-        $this->apiKey = $apiKey;
+        $configServiceFactory = new ConfigServiceFactory($config);
+        $this->configService = $configServiceFactory->getConfigService();
+
+        /** @var Config $companiesHouseConfig */
+        $companiesHouseConfig = $this->configService->get('configuration');
+
+        /** @var Config $companiesHouseConfig */
+        $this->companiesHouseConfig = $companiesHouseConfig;
+    }
+
+    public function getBaseConfig() : Config
+    {
+        return $this->configService;
+    }
+
+    public function getBaseApiUrl() : string
+    {
+        return $this->companiesHouseConfig->get('base_url');
     }
 
     public function getApiKey() : string
     {
-        return $this->apiKey;
+        return $this->apiKey->getApiKey();
     }
 }

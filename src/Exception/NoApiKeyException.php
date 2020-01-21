@@ -2,9 +2,7 @@
 
 namespace LevelFive\CompaniesHouse\Exception;
 
-use Throwable;
-
-class NoApiKeyException extends \HttpException
+class NoApiKeyException extends \InvalidArgumentException
 {
     public function __construct()
     {

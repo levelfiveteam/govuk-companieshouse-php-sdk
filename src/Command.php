@@ -3,6 +3,7 @@ namespace LevelFive\CompaniesHouse;
 
 use Laminas\InputFilter\Factory;
 use Laminas\InputFilter\InputFilterInterface;
+use Railsbank\RailsbankConfig;
 
 abstract class Command
 {
@@ -10,6 +11,11 @@ abstract class Command
      * @var InputFilterInterface
      */
     protected $input;
+
+    /**
+     * @var CompaniesHouseConfig
+     */
+    public $config;
 
     /**
      * Person constructor.
@@ -30,5 +36,16 @@ abstract class Command
     public function getInput() : InputFilterInterface
     {
         return $this->input;
+    }
+
+    public function setConfig(CompaniesHouseConfig $config) : self
+    {
+        $this->config = $config;
+        return $this;
+    }
+
+    public function getConfig() : CompaniesHouseConfig
+    {
+        return $this->config;
     }
 }
