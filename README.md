@@ -14,9 +14,7 @@ This is the Companies House integration using PHP.
 
 ## Instructions
 
-This is the Companies House PHP SDK Kit that allows you to provide a full facility to create customer accounts, ledgers, and a mastercard for your business/service.
-
-We use commands and queries to de-couple requests, and to allow the ability to use a messaging queue system (AWS SQS, RabbitMQ etc...).
+This is the Companies House PHP SDK Kit that allows you to provide a full facility to access companies house, and verify companies.
 
 1. Simply set your application to store the service as a factory;
 
@@ -27,9 +25,9 @@ $companiesHouse = new CompaniesHouse('api_key');
 2. Create commands and queries as and when you need to (example below returns back a response to give you the API Version);
 
 *Example query:*
-`
+```
 $response = $companiesHouse->handle(new GetCompanyByCompanyNumber(['company_number' => '12341234']));
-`
+```
 
 *Example Command:*
 ```
