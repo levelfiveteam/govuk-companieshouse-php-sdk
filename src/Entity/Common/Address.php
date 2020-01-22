@@ -1,5 +1,5 @@
 <?php
-namespace LevelFive\CompaniesHouse\Entity\Company;
+namespace LevelFive\CompaniesHouse\Entity\Common;
 
 use LevelFive\CompaniesHouse\Entity\Entity;
 use LevelFive\CompaniesHouse\Entity\EntityInterface;

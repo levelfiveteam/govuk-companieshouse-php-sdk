@@ -1,5 +1,5 @@
 {
-  "name": "levelfivehub/govuk-companieshouse-php-sdk",
+  "name": "levelfiveteam/govuk-companieshouse-php-sdk",
   "description": "Companies House PHP SDK",
   "minimum-stability": "stable",
   "type": "library",
