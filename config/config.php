@@ -12,12 +12,14 @@ return [
     ],
     'commands' => [
         Query\Company\GetCompanyByNumber::class => QueryHandler\Company\GetCompanyByNumberHandler::class,
-        Query\Me\PHPVersion::class => QueryHandler\Me\PHPVersionHandler::class,
+        Query\Company\GetRegisteredAddressByCompanyNumber::class => QueryHandler\Company\GetRegisteredAddressByCompanyNumberHandler::class,
     ],
     'entity_map' => [
         Query\Company\GetCompanyByNumber::class => "LevelFive\\CompaniesHouse\\Entity\\Company\\GetCompany",
+        Query\Company\GetRegisteredAddressByCompanyNumber::class => "LevelFive\\CompaniesHouse\\Entity\\Company\\RegisteredAddress",
     ],
     'companieshouse_http_url' => [
         Query\Company\GetCompanyByNumber::class => '/company/{{company_number}}',
+        Query\Company\GetRegisteredAddressByCompanyNumber::class => '/company/{{company_number}}/registered-office-address',
     ],
 ];
