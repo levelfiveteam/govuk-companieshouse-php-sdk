@@ -7,6 +7,7 @@ use LevelFive\CompaniesHouse\QueryHandler;
  * All the URLs and Specified keys must be stored in environment variables
 */
 return [
+    'application_name' => 'Companies House PHP SDK',
     'configuration' => [
         'base_url' => 'https://api.companieshouse.gov.uk'
     ],

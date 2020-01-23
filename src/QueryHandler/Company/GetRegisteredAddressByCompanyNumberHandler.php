@@ -16,7 +16,6 @@ class GetRegisteredAddressByCompanyNumberHandler extends Handler
     public function handleGetRegisteredAddressByCompanyNumber(GetRegisteredAddressByCompanyNumber $command)
     {
         $client = new CompaniesHouseClient($command->getConfig());
-        $registeredAddress = $client->handleApiCall($command);
-        return $registeredAddress;
+        return $client->handleApiCall($command);
     }
 }
