@@ -5,10 +5,10 @@ require '../vendor/autoload.php';
 use LevelFive\CompaniesHouse\CompaniesHouse;
 use LevelFive\CompaniesHouse\Query\Company\GetCompanyOfficers;
 
-$companiesHouse = new CompaniesHouse('2rOkCvJeHbf_qhdgVSFeJhXk8nA1b9sOZjFMvm18');
+$companiesHouse = new CompaniesHouse('api-key');
 
 /** @var \LevelFive\CompaniesHouse\Entity\Company\CompanyOfficers $response */
-$response = $companiesHouse->handle(new GetCompanyOfficers(['company_number' => '07172265']));
+$response = $companiesHouse->handle(new GetCompanyOfficers(['company_number' => '00000']));
 
 echo 'Active: ' . $response->getActiveCount();
 echo PHP_EOL;
