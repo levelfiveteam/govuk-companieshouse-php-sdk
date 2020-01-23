@@ -11,6 +11,7 @@ return [
         'base_url' => 'https://api.companieshouse.gov.uk'
     ],
     'commands' => [
+        Query\GetPHPVersion::class => QueryHandler\GetPHPVersionHandler::class,
         Query\Company\GetCompanyByNumber::class => QueryHandler\Company\GetCompanyByNumberHandler::class,
         Query\Company\GetRegisteredAddressByCompanyNumber::class => QueryHandler\Company\GetRegisteredAddressByCompanyNumberHandler::class,
     ],

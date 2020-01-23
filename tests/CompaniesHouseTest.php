@@ -4,8 +4,8 @@ namespace Test;
 
 use LevelFive\CompaniesHouse\CompaniesHouse;
 use LevelFive\CompaniesHouse\Exception\NoApiKeyException;
+use LevelFive\CompaniesHouse\Query\GetPHPVersion;
 use PHPUnit\Framework\TestCase;
-use LevelFive\CompaniesHouse\Query\Me\PHPVersion;
 
 class CompaniesHouseTest extends TestCase
 {
@@ -18,7 +18,7 @@ class CompaniesHouseTest extends TestCase
     public function testValidConfiguration()
     {
         $railsbank = new CompaniesHouse('test123');
-        $command = $railsbank->handle(new PHPVersion());
+        $command = $railsbank->handle(new GetPHPVersion());
 
         self::assertNotNull($command);
         self::assertIsString($command);
