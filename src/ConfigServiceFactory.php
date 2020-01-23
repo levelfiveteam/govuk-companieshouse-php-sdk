@@ -59,10 +59,10 @@ class ConfigServiceFactory
 
     private function getConfiguration(Config $config) :? Config
     {
-        if (! $config->offsetExists('companieshouse_configuration')) {
+        if (! $config->offsetExists('configuration')) {
             throw new CompaniesHouseConfigurationMissingException();
         }
 
-        return $config->offsetGet('companieshouse_configuration');
+        return $config->offsetGet('configuration');
     }
 }

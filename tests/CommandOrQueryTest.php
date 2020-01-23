@@ -3,9 +3,12 @@
 namespace Test;
 
 use DomainException;
+use Laminas\Config\Config;
 use Laminas\InputFilter\InputFilterInterface;
+use Laminas\ServiceManager\ConfigInterface;
 use LevelFive\CompaniesHouse\Command;
 use LevelFive\CompaniesHouse\CommandInterface;
+use LevelFive\CompaniesHouse\CompaniesHouseConfig;
 use PHPUnit\Framework\TestCase;
 
 abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTestInterface
@@ -31,6 +34,11 @@ abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTest
         if ($response || is_array($response)) {
             self::assertEquals($command->getBody(), $response);
         }
+
+        $companiesHouseConfig = new CompaniesHouseConfig('apikey');
+        $command->setConfig($companiesHouseConfig);
+        self::assertInstanceOf(CompaniesHouseConfig::class, $command->getConfig());
+        self::assertEquals('apikey', $command->getConfig()->getApiKey());
 
         self::assertInstanceOf(InputFilterInterface::class, $command->getInput());
     }
