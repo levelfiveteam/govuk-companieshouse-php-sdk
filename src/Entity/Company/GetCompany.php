@@ -148,7 +148,7 @@ class GetCompany extends Entity implements EntityInterface
         $this->companyStatus = $response->offsetGet('company_status');
         $this->companyStatusDetail = $response->offsetGet('company_status_detail');
         $this->dateOfCessation = $response->offsetGet('date_of_cessation');
-        $this->dateOfCreation = $response->offsetGet('date_of_crreation');
+        $this->dateOfCreation = $response->offsetGet('date_of_creation');
         $this->etag = $response->offsetGet('etag');
         $this->externalRegistrationNumber = $response->offsetGet('external_registration_number');
 
