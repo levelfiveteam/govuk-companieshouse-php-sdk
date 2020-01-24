@@ -11,5 +11,4 @@ class DateFormatTest extends TestCase
         $currentDate = (new \DateTime())->format('Y-m-d');
         self::assertEquals((new DateFormat())->getCurrentDate(), $currentDate);
     }
-
 }
