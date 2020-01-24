@@ -47,7 +47,7 @@ class Identification extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getIdentificationType(): ?string
+    public function getIdentificationType():? string
     {
         return $this->identificationType;
     }
@@ -55,7 +55,7 @@ class Identification extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getLegalAuthority(): ?string
+    public function getLegalAuthority():? string
     {
         return $this->legalAuthority;
     }
@@ -63,7 +63,7 @@ class Identification extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getLegalForm(): ?string
+    public function getLegalForm():? string
     {
         return $this->legalForm;
     }
@@ -71,7 +71,7 @@ class Identification extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getPlaceRegistered(): ?string
+    public function getPlaceRegistered():? string
     {
         return $this->placeRegistered;
     }
@@ -79,7 +79,7 @@ class Identification extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getRegistrationNumber(): ?string
+    public function getRegistrationNumber():? string
     {
         return $this->registrationNumber;
     }

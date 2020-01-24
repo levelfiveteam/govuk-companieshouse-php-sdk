@@ -35,7 +35,7 @@ class DateOfBirth extends Entity implements EntityInterface
     /**
      * @return int
      */
-    public function getDay(): int
+    public function getDay():? int
     {
         return $this->day;
     }
@@ -43,7 +43,7 @@ class DateOfBirth extends Entity implements EntityInterface
     /**
      * @return int
      */
-    public function getMonth(): int
+    public function getMonth():? int
     {
         return $this->month;
     }
@@ -51,7 +51,7 @@ class DateOfBirth extends Entity implements EntityInterface
     /**
      * @return int
      */
-    public function getYear(): int
+    public function getYear():? int
     {
         return $this->year;
     }
@@ -59,7 +59,7 @@ class DateOfBirth extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getDateOfBirth(): string
+    public function getDateOfBirth():? string
     {
         return $this->day . '/' . $this->month . '/' . $this->year;
     }
