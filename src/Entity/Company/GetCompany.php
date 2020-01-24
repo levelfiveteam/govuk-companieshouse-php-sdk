@@ -251,17 +251,17 @@ class GetCompany extends Entity implements EntityInterface
     }
 
     /**
-     * @return \DateTimeImmutable
+     * @return string
      */
-    public function getAccountsNextDue(): \DateTimeImmutable
+    public function getAccountsNextDue():? string
     {
         return $this->accountsNextDue;
     }
 
     /**
-     * @return \DateTimeImmutable
+     * @return string
      */
-    public function getAccountsNextMadeUpTo(): \DateTimeImmutable
+    public function getAccountsNextMadeUpTo():? string
     {
         return $this->accountsNextMadeUpTo;
     }

@@ -89,5 +89,8 @@ class GetCompanyTest extends TestCase
         self::assertEquals($response['subtype'], $getCompany->getEntitySubtype());
 
         self::assertEquals($response['accounts'], $getCompany->getAccounts());
+        self::assertEquals($response['accounts']['overdue'], $getCompany->isAccountsOverdue());
+        self::assertEquals($response['accounts']['next_due'], $getCompany->getAccountsNextDue());
+        self::assertEquals($response['accounts']['next_made_up_to'], $getCompany->getAccountsNextMadeUpTo());
     }
 }
