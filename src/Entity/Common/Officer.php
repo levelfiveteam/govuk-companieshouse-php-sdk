@@ -69,7 +69,7 @@ class Officer extends Entity implements EntityInterface
         $this->address = new Address($response->offsetGet('address'));
         $this->appointedOn = $response->offsetGet('appointed_on');
         $this->countryOfResidence = $response->offsetGet('country_of_residence');
-        $this->dateOfBirth = new DateOfBirth($response->offsetGet('region'));
+        $this->dateOfBirth = new DateOfBirth($response->offsetGet('date_of_birth'));
         $this->name = $response->offsetGet('name');
         $this->nationality = $response->offsetGet('nationality');
         $this->occupation = $response->offsetGet('occupation');
@@ -97,7 +97,7 @@ class Officer extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getAppointedOn(): string
+    public function getAppointedOn(): ?string
     {
         return $this->appointedOn;
     }
@@ -105,7 +105,7 @@ class Officer extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getCountryOfResidence(): string
+    public function getCountryOfResidence(): ?string
     {
         return $this->countryOfResidence;
     }
@@ -113,7 +113,7 @@ class Officer extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -121,7 +121,7 @@ class Officer extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getNationality(): string
+    public function getNationality(): ?string
     {
         return $this->nationality;
     }
@@ -129,7 +129,7 @@ class Officer extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getOccupation(): string
+    public function getOccupation(): ?string
     {
         return $this->occupation;
     }
@@ -137,7 +137,7 @@ class Officer extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getOfficerRole(): string
+    public function getOfficerRole(): ?string
     {
         return $this->officerRole;
     }
@@ -145,7 +145,7 @@ class Officer extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getResignedOn(): string
+    public function getResignedOn(): ?string
     {
         return $this->resignedOn;
     }

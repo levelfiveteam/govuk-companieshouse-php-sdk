@@ -75,7 +75,7 @@ class Address extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getFirstLine(): string
+    public function getFirstLine():? string
     {
         return $this->firstLine;
     }
@@ -83,7 +83,7 @@ class Address extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getSecondLine(): string
+    public function getSecondLine():? string
     {
         return $this->secondLine;
     }
@@ -91,7 +91,7 @@ class Address extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getLocality(): string
+    public function getLocality():? string
     {
         return $this->locality;
     }
@@ -99,7 +99,7 @@ class Address extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getRegion(): string
+    public function getRegion():? string
     {
         return $this->region;
     }
@@ -107,7 +107,7 @@ class Address extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getPostalCode(): string
+    public function getPostalCode():? string
     {
         return $this->postalCode;
     }
@@ -115,7 +115,7 @@ class Address extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getCountry(): string
+    public function getCountry():? string
     {
         return $this->country;
     }
@@ -123,7 +123,7 @@ class Address extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getPoBox(): string
+    public function getPoBox():? string
     {
         return $this->poBox;
     }
@@ -131,7 +131,7 @@ class Address extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getPremises(): string
+    public function getPremises():? string
     {
         return $this->premises;
     }
@@ -139,7 +139,7 @@ class Address extends Entity implements EntityInterface
     /**
      * @return string
      */
-    public function getCareOf(): string
+    public function getCareOf():? string
     {
         return $this->careOf;
     }
