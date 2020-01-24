@@ -31,5 +31,7 @@ class AddressTest extends TestCase
         self::assertEquals($response['po_box'], $address->getPoBox());
         self::assertEquals($response['premises'], $address->getPremises());
         self::assertEquals($response['care_of'], $address->getCareOf());
+
+        self::assertEquals($response, $address->getRawResponse());
     }
 }
